@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/onboarding_previous_button"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/grey_edges_rounded"
+        android:text="Back"
+        android:textSize="24sp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/inviteFriendsButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/grey_edges_rounded"
+        android:text="Invite Friends!"
+        android:textSize="24sp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintEnd_toEndOf="@+id/onboardingFrag2ImageViewAvatar"
+        app:layout_constraintStart_toStartOf="@+id/onboardingFrag2ImageViewAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/onboardingFrag2ImageViewAvatar" />
+
+    <TextView
+        android:id="@+id/sharingOnboardingDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text='Thanks for that "$Insert Name Here"! Now we can request important dates from your friends and family! just click the invite button below and NudgeMe will take care of the rest!'
+        android:textSize="20sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onboardingFrag2ImageViewAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/avatar_circle_medium"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:paddingTop="20dp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sharingOnboardingDescriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/sharingOnboardingDescriptionTextView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/onBoardingFrag2LogoImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_previous_button"
+        app:layout_constraintEnd_toEndOf="@+id/inviteFriendsButton"
+        app:layout_constraintStart_toStartOf="@+id/inviteFriendsButton"
+        app:layout_constraintTop_toBottomOf="@+id/inviteFriendsButton"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="welcome.json"
+        app:srcCompat="@drawable/test_photo" />
+
+    <Button
+        android:id="@+id/temporaryOnboardingToMainScreen"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/grey_edges_rounded"
+        android:text="Finished"
+        android:textSize="24sp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/onboarding_previous_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

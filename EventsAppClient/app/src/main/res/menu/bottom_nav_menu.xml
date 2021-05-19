@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_contacts"
+        android:icon="@drawable/ic_friends"
+        android:iconTint="@color/recyclerWhite"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/ic_calendar"
+        android:iconTint="@color/recyclerWhite"
+        android:title="" />
+
+    <item
+        android:id="@+id/my_event_fragment"
+        android:icon="@drawable/ic_personalevent"
+        android:iconTint="@color/recyclerWhite"
+        android:title="" />
+
+</menu>

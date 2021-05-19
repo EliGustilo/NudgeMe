@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NudgeMe</string>
+    <string name="welcome_to_nudgeme">Welcome to NudgeMe!</string>
+    <string name="onboarding_msg">Make your life easier! Use NudgeMe to request the important dates from your friends or create your own! You can add reminders and we will nudge you when its time to remember! Easy!</string>
+    <string name="name_msg">Lets start simple. Whats your name?</string>
+    <string name="empty_msg">No events. To request events from your friends the click \"INVITE FRIENDS\" button</string>
+    <string name="single_contact_msg">At this time NudgeMe only supports inviting one friend at a time. If you want to us to support invitations to multiple friends click the \"MANY FREINDS\" button.</string>
+    <string name="single_contact_title">Notice: Single Contact Only</string>
+    <string name="single_continue">CONTINUE</string>
+    <string name="single_many_friends">MANY FRIENDS</string>
+    <string name="single_cancel">CANCEL</string>
+</resources>

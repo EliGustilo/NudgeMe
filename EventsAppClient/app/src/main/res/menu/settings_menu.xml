@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--<item
+        android:id="@+id/myEventsMenuItem"
+        android:title="My Events" />-->
+    <item
+        android:id="@+id/inviteFriendsMenuItem"
+        android:title="Invite Friends" />
+    <item
+        android:id="@+id/tosMenuItem"
+        android:title="Terms of Service" />
+    <item
+        android:id="@+id/privacyMenuItem"
+        android:title="Privacy" />
+    <item
+        android:id="@+id/feedbackMenuItem"
+        android:title="Feedback" />
+    <item
+        android:id="@+id/loginItem"
+        android:title="Login" />
+    <item
+        android:id="@+id/logoutItem"
+        android:title="Logout" />
+
+</menu>

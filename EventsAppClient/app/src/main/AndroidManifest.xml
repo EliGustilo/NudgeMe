@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eligustilo.NudgeMe">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_v3"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:label="OnBoardingActivity"
+            android:name=".onboarding.OnBoardingActivity">
+            <!--intent-filters are a way to talk to the android system to declare the activity of type x.
+            so the system can search for all activities fitting the tag. Such as LAUNCHER above. This allows the
+            system to see your app in the launch bar. Intent filters are unnecessary if your app is going to be
+            internally used such as the below OnBoardingActivity. I put it there as demonstration/good practice.-->
+            <intent-filter>
+                <action android:name="my.app.OnBoardingActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.EventDetailsActivity"
+            android:label="ReminderActivity">
+            <intent-filter>
+                <action android:name="my.app.ReminderActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="SettingsActivity">
+            <intent-filter>
+                <action android:name="my.app.SettingsActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".LegalActivity"
+            android:label="LegalActivity">
+            <intent-filter>
+                <action android:name="my.app.LegalActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+<!--       AlarmBroadcastReceiver and AlarmManagerService code-->
+        <receiver
+            android:name=".ui.notifications.AlarmBroadcastReceiver"
+            android:exported="true"
+            android:permission="TODO" />
+        <service
+            android:name=".ui.notifications.AlarmManagerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+    </application>
+
+</manifest>

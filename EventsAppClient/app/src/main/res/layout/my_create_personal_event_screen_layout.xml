@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/personalCreateEventWelcomeTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/porter_bold"
+        android:text="Create Event"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/personalEventNameTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Name:"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalCreateEventImageView" />
+
+    <TextView
+        android:id="@+id/personalEventDateTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Date:"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="@+id/personalEventNameTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/personalEventNameTextEdit" />
+
+    <EditText
+        android:id="@+id/personalEventDateEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:fontFamily="@font/coolvetica"
+        android:hint="Date Entry"
+        android:inputType="date"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/personalEventDateTextEdit"
+        app:layout_constraintEnd_toEndOf="@+id/personalEventNameEntry"
+        app:layout_constraintStart_toStartOf="@+id/personalEventNameEntry"
+        app:layout_constraintTop_toTopOf="@+id/personalEventDateTextEdit" />
+
+    <Button
+        android:id="@+id/personalCreateEventButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="Create"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="@drawable/grey_edges_rounded"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalEventDateTextEdit"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <EditText
+        android:id="@+id/personalEventNameEntry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/coolvetica"
+        android:hint="Event name?"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/personalEventNameTextEdit"
+        app:layout_constraintStart_toEndOf="@+id/personalEventNameTextEdit"
+        app:layout_constraintTop_toTopOf="@+id/personalEventNameTextEdit" />
+
+    <ImageView
+        android:id="@+id/personalCreateEventImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalCreateEventWelcomeTextEdit"
+        android:src="@drawable/icon_v3" />
+
+    <Button
+        android:id="@+id/personalCancelButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:text="Cancel"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="@drawable/grey_edges_rounded"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/personalCreateEventButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/personalCreateEventButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/test_onboarding_forward"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Next"
+        android:textSize="24sp"
+        android:background="@drawable/grey_edges_rounded"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/onboardingFragOneImageViewAvatar"
+        app:layout_constraintStart_toStartOf="@+id/onboardingFragOneImageViewAvatar" />
+
+    <EditText
+        android:id="@+id/nameInputTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:hint="What is your name?"
+        android:imeOptions="actionDone"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:focusedByDefault="true"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionOnboardingTextView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/descriptionOnboardingTextView"
+        app:layout_constraintTop_toBottomOf="@+id/onboardingNameRequest" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome_to_nudgeme"
+        android:textSize="28sp"
+        android:textStyle="bold|italic"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/onboardingFragOneImageViewAvatar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/test_drawable"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toTopOf="@+id/test_onboarding_forward"
+        app:layout_constraintEnd_toEndOf="@+id/nameInputTextView"
+        app:layout_constraintStart_toStartOf="@+id/nameInputTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputTextView"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="welcome.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/descriptionOnboardingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/onboarding_msg"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+    <TextView
+        android:id="@+id/onboardingNameRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/name_msg"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="@+id/descriptionOnboardingTextView"
+        app:layout_constraintStart_toStartOf="@+id/descriptionOnboardingTextView"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionOnboardingTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

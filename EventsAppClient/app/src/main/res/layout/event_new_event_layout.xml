@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/eventsCreateEventWelcomeTextEdit"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/porter_bold"
+        android:text="Create Event for events!"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eventsEventNameTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="60dp"
+        android:text="Event Name:"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventsCreateEventAvatar" />
+
+    <TextView
+        android:id="@+id/whichFriendTextEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="Which Friend?"
+        android:textSize="20sp"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintEnd_toEndOf="@+id/eventsEventNameTextEdit"
+        app:layout_constraintStart_toStartOf="@+id/eventsEventNameTextEdit"
+        app:layout_constraintTop_toBottomOf="@+id/eventsEventNameTextEdit" />
+
+    <Button
+        android:id="@+id/eventsCreateEventButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="Create"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:background="@drawable/grey_edges_rounded"
+        android:fontFamily="@font/porter_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whichFriendTextEdit"
+        app:layout_constraintVertical_bias="0.352" />
+
+    <EditText
+        android:id="@+id/eventsEventNameEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:hint="Event name?"
+        android:singleLine="true"
+        android:fontFamily="@font/coolvetica"
+        app:layout_constraintBottom_toBottomOf="@+id/eventsEventNameTextEdit"
+        app:layout_constraintStart_toEndOf="@+id/eventsEventNameTextEdit"
+        app:layout_constraintTop_toTopOf="@+id/eventsEventNameTextEdit" />
+
+    <Button
+        android:id="@+id/eventsCancelButton"
+        android:layout_width="175dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:text="Cancel"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/porter_bold"
+        android:background="@drawable/grey_edges_rounded"
+        app:layout_constraintBottom_toBottomOf="@+id/eventsCreateEventButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eventsCreateEventButton" />
+
+    <TextView
+        android:id="@+id/whichFriendSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/coolvetica"
+        android:hint="Which Friend?"
+        android:singleLine="true"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/whichFriendTextEdit"
+        app:layout_constraintStart_toStartOf="@+id/eventsEventNameEntry"
+
+        app:layout_constraintTop_toTopOf="@+id/whichFriendTextEdit"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#7f7f7e"
+        android:layout_marginTop="1dp"
+        app:layout_constraintStart_toStartOf="@+id/whichFriendSelector"
+        app:layout_constraintEnd_toEndOf="@+id/whichFriendSelector"
+        app:layout_constraintTop_toBottomOf="@+id/whichFriendSelector" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/eventsCreateEventAvatar"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        android:background="@drawable/avatar_circle_medium"
+        android:layout_marginTop="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventsCreateEventWelcomeTextEdit">
+
+        <TextView
+            android:id="@+id/newEventAvatarDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="28sp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

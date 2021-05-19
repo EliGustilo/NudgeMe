@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_event">
+
+    <fragment
+        android:id="@+id/navigation_event"
+        android:name="com.eligustilo.NudgeMe.ui.events.EventsFragment"
+        android:label="Events"
+        tools:layout="@layout/fragment_event" >
+        <action
+            android:id="@+id/action_navigation_event_to_event_new_event_fragment"
+            app:destination="@id/events_new_event_fragment" />
+        <action
+            android:id="@+id/action_navigation_event_to_my_event_fragment"
+            app:destination="@id/my_event_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/events_new_event_fragment"
+        android:name="com.eligustilo.NudgeMe.ui.events.EventsNewEventFragment"
+        android:label="EventsNewEventFragment"
+        tools:layout="@layout/event_new_event_layout">
+        <action
+            android:id="@+id/events_new_event_fragment_to_navigation_events"
+            app:destination="@id/navigation_event" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_contacts"
+        android:name="com.eligustilo.NudgeMe.ui.contacts.ContactsFragment"
+        android:label="Contacts"
+        tools:layout="@layout/contacts_fragment" >
+
+        <action
+        android:id="@+id/action_navigation_contacts_to_contacts_new_event_fragment"
+        app:destination="@id/contacts_new_event_fragment" />
+
+        <action
+            android:id="@+id/action_navigation_contacts_to_my_event_fragment"
+            app:destination="@id/my_event_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/contacts_new_event_fragment"
+        android:name="com.eligustilo.NudgeMe.ui.contacts.ContactsNewEventFragment"
+        android:label="SetNewEventFragment"
+        tools:layout="@layout/contacts_new_event_fragment">
+        <action
+            android:id="@+id/events_new_event_fragment_to_navigation_events"
+            app:destination="@id/navigation_contacts" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_event_fragment"
+        android:name="com.eligustilo.NudgeMe.ui.myevents.MyEventFragment"
+        android:label="MyEventFragment"
+        tools:layout="@layout/my_events_layout">
+        <action
+            android:id="@+id/my_event_fragment_to_navigation_home"
+            app:destination="@id/navigation_contacts" />
+        <action
+            android:id="@+id/my_event_fragment_to_my_new_event_fragment"
+            app:destination="@id/my_new_event_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_new_event_fragment"
+        android:name="com.eligustilo.NudgeMe.ui.myevents.MyEventsNewEventFragment"
+        android:label="MyNewEventFragment"
+        tools:layout="@layout/my_create_personal_event_screen_layout">
+        <action
+            android:id="@+id/my_new_personal_event_fragment_to_my_events"
+            app:destination="@id/my_event_fragment" />
+    </fragment>
+
+</navigation>
